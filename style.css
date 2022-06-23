@@ -1,0 +1,35 @@
+.bkgrCont {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+}
+
+.bkgrContLogin {
+    background-image: url('./assets/img/pexels-sora-shimazaki-5668772.jpg');
+}
+
+.bkgrContRegisto{
+    background-image: url('./assets/img/pexels-pavel-danilyuk-8112172.jpg');
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.br-0 {
+    border-radius: 0;
+}
+
+.fondoAzul {
+    background-color: #0078A7;
+}
+
+.userIcon i {
+    color: white;
+    font-size: 12rem;
+}
+
+.userNav {
+    font-size: 1.5rem;
+    font-weight: 600
+}
