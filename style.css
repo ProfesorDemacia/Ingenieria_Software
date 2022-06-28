@@ -34,9 +34,8 @@
     font-weight: 600
 }
 .fondoGris {
-    background-color: lightgrey;
+    background-color: #EFEFEF;
     text-decoration: none;
-
 }
 .estiloNav{
     background-color:#0078A7 ;
@@ -71,7 +70,7 @@
     margin-right: 5px;
 }
 
-.vistaCliente .companyTitle::before {
+.companyTitle::before {
     height: 3px;
     width: 50px;
     background-color: #FFF;
@@ -81,7 +80,7 @@
     margin-right: 10px;
 }
 
-.vistaCliente .companyTitle::after {
+.companyTitle::after {
     height: 3px;
     width: 50px;
     background-color: #FFF;
@@ -89,4 +88,31 @@
     display: inline-block;
     margin-bottom: 5px;
     margin-left: 10px;
+}
+
+nav.vistaAbogado {
+    height: 60px;
+}
+
+.h-100Abo {
+    height: calc(100vh - 60px);
+}
+
+.stillWorking {
+    height: 35rem;
+}
+
+.circleUser {
+    border: 3px solid #FFF;
+    border-radius: 100%;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: super;;
+}
+
+.userLogout i {
+    color: white;
+    font-size: 1.8rem;
 }
