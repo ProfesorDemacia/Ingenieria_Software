@@ -33,3 +33,28 @@
     font-size: 1.5rem;
     font-weight: 600
 }
+.fondoGris {
+    background-color: lightgrey;
+    text-decoration: none;
+
+}
+.estiloNav{
+    background-color:#0078A7 ;
+    color: white;
+}
+.mt-50{
+    margin-top: 100px;
+}
+.letraBlanca{
+    color: white;
+}
+.letraAzul{
+    color: #0078A7;
+}
+.cuadroInformacion{
+    margin: 0% auto;
+    background-color: lightgray;
+    margin-top: 150px;
+    padding: 25px;
+    width: 850px;
+}
