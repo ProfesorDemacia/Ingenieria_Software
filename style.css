@@ -4,6 +4,12 @@ input:focus, .btn:focus,
     box-shadow: none;
 }
 
+a {
+    color: #0078A7;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 .bkgrCont {
     background-repeat: no-repeat;
     background-size: cover;
