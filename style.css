@@ -163,3 +163,7 @@ nav.vistaAbogado {
     margin: 3rem;
     padding: 25px;
 }
+
+#ingresoSolicitudTec .cuadroInformacionCompany {
+    background-color: #EFEFEF;
+}
