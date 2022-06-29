@@ -131,3 +131,7 @@ function toggleContratos() {
         contrato.style.display = "block";
     }
 }
+
+function backPresupuestos() {
+    location.href = 'presupuesto_abogado.html';
+}
