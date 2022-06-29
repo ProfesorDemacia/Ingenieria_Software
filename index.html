@@ -27,13 +27,16 @@
             <span class="d-block mb-2">Ingrese los siguientes datos para ingresar al portal</span>
             <form class="mb-2" name="formularioIngreso">
               <div class="col-12 mb-1">
-                <input type="email" class="form-control br-0" id="inpEmail" name="inpEmail" value="" placeholder="email">
+                <input type="email" class="form-control br-0" id="inpEmail" autocomplete="off" name="inpEmail" value=""
+                  placeholder="email">
               </div>
               <div class="col-12 mb-2">
-                <input type="password" class="form-control br-0" id="inpPassword" name="inpPassword" value="" placeholder="contraseña">
+                <input type="password" class="form-control br-0" id="inpPassword" autocomplete="off" name="inpPassword"
+                  value="" placeholder="contraseña">
               </div>
               <div class="col-12 mb-2 d-grid gap-2">
-                <button type="button" class="btn btn-primary mb-3 br-0"  onclick="javascript:void(ingresar())">Ingresar</button>
+                <button type="button" class="btn btn-primary mb-3 br-0"
+                  onclick="javascript:void(ingresar())">Ingresar</button>
               </div>
               <div class="col-12">
                 <span>¿No tiene cuenta? <a href="registro.html">Regístrese</a> </span>
@@ -43,33 +46,32 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="modal fade" id="modalIngreso" tabindex="-1" aria-labelledby="modalIngresoAdvertencia" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h4 id="modalIngresoAdvertencia"></h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entiendo</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
-    <script>
-      function ingresar() {
-        var usuario = document.formularioIngreso.inpEmail.value;
-        var contrasenia = document.formularioIngreso.inpPassword.value;
-
-        if (usuario.length === 0 || contrasenia.length === 0) {
-          alert('Debe ingresar los datos requeridos');
-        }
-
-        else if (usuario === 'ce.contreras@gmail.com' && contrasenia === 'facil' ) {
-            location.href = 'vista_abogado.html';
-        }
-
-        else if ( usuario === 'naticcg@gmail.com' && contrasenia === '1234') {
-          location.href = 'vista_cliente.html';
-        }
-      }
-
-    </script>
+  <script>
+    var modalIngreso = new bootstrap.Modal(document.getElementById('modalIngreso'), {
+      keyboard: false
+    });
+    var modalIngresoAdvertencia = document.getElementById('modalIngresoAdvertencia');
+  </script>
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

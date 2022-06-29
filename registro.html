@@ -25,27 +25,34 @@
           <div class="col-10 text-center">
             <h3>Registro</h3>
             <span class="d-block mb-2">Ingrese los siguientes datos para registrarse</span>
-            <form class="mb-2">
+            <form class="mb-2" name="formularioRegistro">
               <div class="col-12 mb-1">
-                <input type="text" class="form-control br-0" id="inpNombre" value="" placeholder="nombre">
+                <input type="text" class="form-control br-0" autocomplete="off" id="inpNombre" name="inpNombre" value=""
+                  placeholder="nombre">
               </div>
               <div class="col-12 mb-1">
-                <input type="text" class="form-control br-0" id="inpApellidos" value="" placeholder="apellidos">
+                <input type="text" class="form-control br-0" autocomplete="off" id="inpApellidos" name="inpApellidos"
+                  value="" placeholder="apellidos">
               </div>
               <div class="col-12 mb-1">
-                <input type="text" class="form-control br-0" id="inpRut" value="" placeholder="rut">
+                <input type="text" class="form-control br-0" autocomplete="off" id="inpRut" name="inpRut" value=""
+                  placeholder="rut">
               </div>
               <div class="col-12 mb-1">
-                <input type="email" class="form-control br-0" id="inpEmail" value="" placeholder="email">
+                <input type="email" class="form-control br-0" autocomplete="off" id="inpEmail" name="inpEmail" value=""
+                  placeholder="email">
               </div>
               <div class="col-12 mb-2">
-                <input type="password" class="form-control br-0" id="inpPassword" placeholder="contraseña">
+                <input type="password" class="form-control br-0" autocomplete="off" id="inpPassword" name="inpPassword"
+                  placeholder="contraseña">
               </div>
               <div class="col-12 mb-2">
-                <input type="password" class="form-control br-0" id="inpRepPassword" placeholder="repetir contraseña">
+                <input type="password" class="form-control br-0" autocomplete="off" id="inpRepPassword"
+                  name="inpRepPassword" placeholder="repetir contraseña">
               </div>
               <div class="col-12 mb-2 d-grid gap-2">
-                <button type="submit" class="btn btn-primary mb-3 br-0">Registrarse</button>
+                <button type="button" class="btn btn-primary mb-3 br-0"
+                  onclick="javascript:void(registrar())">Registrarse</button>
               </div>
               <div class="col-12">
                 <span>¿Ya tiene cuenta? <a href="index.html">Inicie sesión</a> </span>
@@ -55,13 +62,51 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h4 id="modalRegistroAdvertencia"></h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entiendo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalExitoso" tabindex="-1" aria-labelledby="modalExitosoMensaje" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h4 id="modalExitosoMensaje">Usuario registrado exitosamente.</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary mx-auto" data-bs-dismiss="modal"
+            onclick="javascript:void(volverLogin())">Volver al Inicio</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script>
+    var modalRegistro = new bootstrap.Modal(document.getElementById('modalRegistro'), {
+      keyboard: false
+    });
+    var modalExitoso = new bootstrap.Modal(document.getElementById('modalExitoso'), {
+      keyboard: false
+    });
+    var modalRegistroAdvertencia = document.getElementById('modalRegistroAdvertencia');
+  </script>
+
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
